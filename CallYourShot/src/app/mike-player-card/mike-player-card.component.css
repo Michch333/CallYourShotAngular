@@ -1,0 +1,112 @@
+body {
+    background-color: lightgrey;
+}
+ul {
+    list-style-type: none;
+}
+
+#playerHeader {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-bottom: 100px;
+    /* border: 1px solid red; */
+}
+
+#nameDisplay {
+    height: 100px;
+    width: 50%;
+    /* border: 1px solid blue; */
+    font-size: 85px;
+    border-left: 10px;
+}
+
+#numberOfWins {
+    height: 100px;
+    width: 50%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.crownIcon {
+    float: right;
+    height: 85px;
+    width: 135px;
+    margin-left: 5px;
+}
+
+#mainContainer {
+    height: 400px;
+    width: 100%;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+#playerIcon {
+    background-image: url("/CallYourShot/src/assets/images/marioIcon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 40%;
+    /* border: 1px solid blue; */
+}
+
+#playerInfo {
+    height: 100%;
+    width: 40%;
+    /* border: 1px solid purple; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#cWLabel {
+    font-size: 45px;
+    margin-right: 10px;
+    border-bottom: 5px solid black;
+    margin-bottom: 15px;
+}
+
+.currentWins {
+    height: 40px;
+    width: 40px;
+    /* border: 1px solid red; */
+    border-radius: 50%;
+    background:  none;
+}
+
+#currentRoll {
+    height: 50%;
+    width: 50%;
+    /* border: 1px solid blue; */
+    font-size: 150px;
+}
+
+
+#dookieAndWins {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.dookie {
+    height: 85px;
+    width: 85px;
+}
+
+#consWins {
+    margin-left: 25px;
+    font-size: 100px;
+    color: blue;
+}
+
+.perfectRoll {
+    height: 100px;
+    width: 100px;
+}

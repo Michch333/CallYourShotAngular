@@ -1,0 +1,145 @@
+<body class="rollPage">
+       
+    <header class="header">    
+        <h1 class="dabYet" id="dabCheck">You High Yet?</h1>
+        <label for="dabbCheckboxes" class="players" id="player0">MTC</label>
+        <input type="checkbox" class="dabCheckboxes" onclick="haveAllDabbed()">
+        
+        <label for="dabbCheckboxes" class="players" id="player1">JDW</label>
+        <input type="checkbox" class="dabCheckboxes" onclick="haveAllDabbed()">
+
+        <label for="dabbCheckboxes" class="players" id="player2">GMK</label>
+        <input type="checkbox" class="dabCheckboxes" onclick="haveAllDabbed()">
+    </header>
+    <div class="rolls">
+        <div class="drLeft">
+            <h1 class="drHeader">Your Roll</h1>
+            <label for="randomNumberDisplay" class="displayNumber" id="randomNumber" >XD</label>
+        
+        </div>
+       
+        <div class="drRight">
+            <H1 class="drHeader">Target Number</H1>
+            <label for="pirNumberDisplay" class="pirNumber" id="pirNumber" >12</label>
+            
+        </div>
+    </div>
+    
+    <div class="rollResults">
+        <p id="player0RollResult">
+
+        </p>
+        <p id="player1RollResult">
+
+        </p>
+        <p id="player2RollResult">
+
+        </p>
+        <p id="player3RollResult">
+
+        </p>
+
+    </div>
+    <footer class="rollBtn">
+        <button class="rollPageBtn" id="rollBtn" onclick="buttonClickedRoll()">Roll</button> <br>
+        <button class="rollPageBtn" onclick="openModal()">Open Game Info</button> 
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h1 id="gameInformationTitle">Game Information</h1>
+                <form class="modal-content">
+                    <label for="gameChoiceName">New Game Name:</label>
+                    <input type="text" id="gameChoiceName"/>
+
+                    <label for="gameChoiceRules">New Game Rules:</label>
+                    <input type="text" id="gameChoiceRules"/>
+
+                    <label for="gameChoiceSelect">New Game Type:</label>
+                    <select onchange="showDetailedGameInfo()" id="gameChoiceSelect">
+                        <option selected>Select A Game Type</option>
+                        <option value="race">Race</option>
+                        <option value="points">Points</option>
+                        <option value="bracket">Bracket</option>
+                    </select>
+                </form>
+                <div id="raceSelected">
+                    <h1 class="selectionTitle" id="raceTitle">Race</h1>
+                    <label for="player0time">Mike</label>
+                    <input id="player0time" type="text"/>
+
+                    <label for="player1time">Jason</label>
+                    <input type="text" id="player1time"/>
+
+                    <label for="player2time">Greg</label>
+                    <input type="text" id="player2time"/>
+                    
+                </div>
+
+                <div id="pointsSelected">
+                    <h1 id="pointsTitle" class="selectionTitle">Points</h1>
+                    <label for="player0points">Mike</label>
+                    <input id="player0points" type="text"/>
+
+                    <label for="player1points">Jason</label>
+                    <input type="text" id="player1points"/>
+
+                    <label for="player2points">Greg</label>
+                    <input type="text" id="player2points"/>
+                </div>
+
+                <div id="bracketSelected">
+
+                    <h1 id="bracketTitle" class="selectionTitle">Bracket</h1>
+
+                    <div id="byeSelect">
+                        <h2>Select Who Has The Bye</h2><br>
+                        <p class="bracketPlayers">TBD</p>
+                        <input class="byeOptions" type="checkbox"/>
+                        <p class="bracketPlayers">TBD</p>
+                        <input class="byeOptions" type="checkbox"/>
+                        <p class="bracketPlayers">TBD</p>
+                        <input class="byeOptions" type="checkbox"/>
+                        <button id="bracketReadyBtn" onclick="grabPlayersForFirstRound()" >Ready!</button>
+                    </div>
+
+                    <div id="bracketRoundContainer">
+                        <div id="round1Container">
+                            <h2>Round 1</h2>
+                            <input class="rnd1Checkbox" type="checkbox">
+                            <p class="round1">TBD</p>
+                            <input class="rnd1Checkbox" type="checkbox">
+                            <p class="round1">TBD</p>
+                            <button id="round1FinishedBtn" onclick="buildSecondRound()">Round 1 Finished!</button>
+                        </div>
+
+                        <div id="round2Container">
+                            <h2>Round 2</h2>
+                            <input type="checkbox" class="round2boxes">
+                            <p id="byeWinner" class="round2">TBD</p>
+                            <input type="checkbox" class="rnd1winner round2boxes">
+                            <p class="round2" id="rnd1winner">TBD</p>
+                            <button onclick="buildWinner()">Show Winner!</button>
+                        </div>
+
+                        <div id="winnerContainer">
+                            <h2 id="winnerSlot">Winner</h2>
+                            <input type="checkbox">
+                            <p class="winnerDisplay">TBD</p>
+                        </div>
+
+                    </div>
+
+                    
+
+                </div>
+                <button class="rollPageBtn" id="gameSubmitBtn" onclick="closeModal()">Submit!</button>
+            </div>
+
+        </div>
+    </footer>
+    
+       
+    
+</body>
